@@ -4,8 +4,6 @@ import '../constant/colors.dart';
 import '../cubit/yes_no_cubit.dart';
 import '../interface/pressed.dart';
 
-Color _backgroundlocal = bgField;
-
 class SearchFieldWidget extends StatelessWidget {
   final IPressed pressed;
   final TextEditingController textController;
@@ -52,7 +50,7 @@ class SearchFieldWidget extends StatelessWidget {
           hintStyle: TextStyle(color: Colors.grey.shade600),
           suffixIcon: _buildSuffixIcon(isSelected),
           filled: true,
-          fillColor: background ?? _backgroundlocal,
+          fillColor: background ?? bgField,
           contentPadding: const EdgeInsets.all(15),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
@@ -60,10 +58,10 @@ class SearchFieldWidget extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: background ?? _backgroundlocal)),
+              borderSide: BorderSide(color: background ?? bgField)),
           disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: background ?? _backgroundlocal))),
+              borderSide: BorderSide(color: background ?? bgField))),
       onChanged: (value) {
         ctx.read<YesNoCubit>().set(value.isNotEmpty);
       },
@@ -80,7 +78,7 @@ class SearchFieldWidget extends StatelessWidget {
         selectedIcon: const Icon(Icons.send_rounded),
         style: IconButton.styleFrom(
           backgroundColor:
-              isSelected ? selectedItemColor : background ?? _backgroundlocal,
+              isSelected ? selectedItemColor : background ?? bgField,
         ),
         onPressed: () => pressed.onIPressed(textController.text));
   }

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-const Color greyShade1 = Color(0xFFE7E7E7);
-const Color whiteShade1 = Color(0xFFF6F6F6);
-
-class CustomFieldText extends StatelessWidget {
+class UIFieldText extends StatelessWidget {
   final List<String>? autofillHints;
   final String? label;
   final Widget? suffixIcon;
@@ -34,7 +31,7 @@ class CustomFieldText extends StatelessWidget {
   final Widget? suffix;
   final String? hintText;
 
-  const CustomFieldText(
+  const UIFieldText(
       {super.key,
       this.label,
       this.suffixIcon,
@@ -50,7 +47,7 @@ class CustomFieldText extends StatelessWidget {
       this.counterText = "",
       this.onChange,
       this.initialValue,
-      this.containerColor = whiteShade1,
+      this.containerColor = const Color(0xFFF6F6F6),
       this.prefixIcon,
       this.textAlign = TextAlign.start,
       this.enabled,
@@ -177,6 +174,7 @@ class CustomFieldText extends StatelessWidget {
   }
 
   InputDecoration getDecoration() {
+    const Color greyShade1 = Color(0xFFE7E7E7);
     return InputDecoration(
       hintStyle: const TextStyle(color: Color.fromARGB(255, 188, 220, 246)),
       filled: true,

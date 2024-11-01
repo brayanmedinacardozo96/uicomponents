@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uicomponents/fields/text_field.dart';
+import 'fields.dart';
+
 
 class AppFieldSearchChange extends StatelessWidget {
   final Function(String?)? onChange;
@@ -23,7 +24,7 @@ class AppFieldSearchChange extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomFieldText(
+    return UIFieldText(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         label: label,

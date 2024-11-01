@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:uicomponents/fields/text_field.dart';
 import '../cubit/yesnot_cubit.dart';
-
-const Color greyShade1 = Color(0xFFE7E7E7);
-const Color whiteShade1 = Color(0xFFF6F6F6);
+import 'fields.dart';
 
 class FildPassword extends StatelessWidget {
   final Function(String?)? onChange;
@@ -20,7 +17,7 @@ class FildPassword extends StatelessWidget {
     this.controller,
     this.validation,
     this.fontSize,
-    this.containerColor = whiteShade1,
+    this.containerColor = const Color(0xFFF6F6F6),
     this.labelText,
   });
 
@@ -29,7 +26,7 @@ class FildPassword extends StatelessWidget {
     return BlocProvider(
         create: (context) => YesNotCubit(),
         child: BlocBuilder<YesNotCubit, bool>(builder: (context, state) {
-          return CustomFieldText(
+          return UIFieldText(
             label: labelText,
             fontSize: 13,
             controller: controller,
