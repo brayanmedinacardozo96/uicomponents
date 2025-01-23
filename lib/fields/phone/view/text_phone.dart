@@ -3,9 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:uicomponents/uicomponents.dart';
 
-import '../../../models/models.dart';
-import '../cubit/phone_cubit.dart';
-
 class UIPhone extends StatelessWidget {
   final TextEditingController controller;
   final String label;
@@ -31,7 +28,7 @@ class UIPhone extends StatelessWidget {
               onPressed: onPressed,
               icon: const Icon(Icons.arrow_drop_down),
               label: SizedBox(
-                  width: state.dialCode.length == 4 ? 70 : 60,
+                  width: state.dialCode.length == 4 ? 80 : 70,
                   child: Row(
                     children: [
                       Text("+ ${state.dialCode} "),
