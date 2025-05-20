@@ -43,7 +43,9 @@ class AppButtonWidget extends StatelessWidget {
     }
     return Text(
       label,
-      style: const TextStyle(color: Colors.white, fontSize: 16),
+      style: TextStyle(
+          color: backgroundColor == Colors.white ? Colors.black : Colors.white,
+          fontSize: 16),
     );
   }
 }

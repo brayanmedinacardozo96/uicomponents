@@ -15,7 +15,7 @@ class AppArrowBackWidget extends StatelessWidget {
 
   Widget _buildIco() {
     if (kIsWeb) {
-      return Icon(Icons.arrow_back, color: color);
+      return Icon(Icons.close, color: color);
     }
     return Platform.isIOS
         ? Icon(Icons.arrow_back_ios, color: color)

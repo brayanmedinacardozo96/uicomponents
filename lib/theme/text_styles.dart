@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  static TextStyle headlineLarge(BuildContext context) =>
+      Theme.of(context).textTheme.headlineLarge!.copyWith(
+            fontFamily: 'Outfit',
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.0,
+          );
+
+  static TextStyle labelMedium(BuildContext context) =>
+      Theme.of(context).textTheme.labelMedium!.copyWith(
+            fontFamily: 'Readex Pro',
+            letterSpacing: 0.0,
+          );
+
   static TextStyle h1({Color color = Colors.black}) {
     return TextStyle(
       fontSize: 32.0,

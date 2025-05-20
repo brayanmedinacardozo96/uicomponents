@@ -26,3 +26,5 @@ export './arrow/arrow_icon.dart';
 export './dialogs/dialogs.dart';
 export './fields/fields.dart';
 export './models/models.dart';
+export './alerts/dialog_manager.dart';
+export './alerts/dialog_manager_general.dart';

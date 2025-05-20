@@ -10,8 +10,8 @@ class Logo {
   Logo(
       {required this.type,
       required this.source,
-      this.height = 200,
-      this.width = 200});
+      this.height = 230,
+      this.width = 250});
 }
 
 class LoginLabel {

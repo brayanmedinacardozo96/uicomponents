@@ -7,7 +7,9 @@ Future<dynamic> dialogGeneral(
       transitionBuilder: (context, a1, a2, widget) {
         return Transform.scale(
           scale: a1.value,
-          child: Opacity(opacity: a1.value, child: child),
+          child: Opacity(opacity: a1.value, child:
+           child
+           ),
         );
       },
       transitionDuration: const Duration(milliseconds: 200),
